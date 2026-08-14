@@ -1,14 +1,14 @@
 {
   "queries": [
-    "site:amazon.eg \"DeLonghi Dedica\" espresso machine",
-    "site:noon.com/egypt-en \"Black & Decker\" drip coffee maker",
-    "site:jumia.com.eg \"Philips\" automatic espresso machine",
-    "site:amazon.eg \"Nespresso Essenza Mini\" capsule coffee machine",
-    "site:noon.com/egypt-en \"Ariete Vintage\" espresso coffee machine",
-    "site:jumia.com.eg \"Sonai\" drip coffee maker",
-    "site:amazon.eg \"Kenwood\" espresso cappuccino maker",
-    "site:noon.com/egypt-en \"DeLonghi Magnifica\" fully automatic coffee machine",
-    "site:amazon.eg \"Mienta\" drip coffee machine",
-    "site:jumia.com.eg \"DeLonghi\" pump espresso machine"
+    "site:amazon.eg DeLonghi Magnifica S ECAM22.110.B Automatic Espresso Machine",
+    "site:noon.com/egypt-en Philips 2200 Series Fully Automatic Espresso Machine EP2220/10",
+    "site:jumia.com.eg Black+Decker 1.25L Drip Coffee Maker DCM85-B5",
+    "site:amazon.eg Nespresso Essenza Mini Capsule Coffee Machine by DeLonghi",
+    "site:noon.com/egypt-en DeLonghi Dedica Pump Espresso Machine EC685.M",
+    "site:jumia.com.eg Sonai Espresso and Cappuccino Maker 15 Bar",
+    "site:amazon.eg Tefal Subito Drip Filter Coffee Maker 10-15 Cups",
+    "site:noon.com/egypt-en Ariete Vintage Espresso Coffee Machine 1389",
+    "site:amazon.eg Siemens EQ.300 Fully Automatic Coffee Machine",
+    "site:jumia.com.eg Kenwood Drip Coffee Machine CMM10.000BM"
   ]
 }
