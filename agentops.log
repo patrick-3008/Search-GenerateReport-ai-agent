@@ -1,1 +1,231 @@
-2026-08-14 16:32:40,910 - INFO - You're on the agentops free plan 🤔
+2026-08-14 17:00:45,500 - WARNING - ToolEvent() is deprecated and will be removed in v4 in the future. Automatically tracked in v4.
+2026-08-14 17:00:48,564 - ERROR - Error in span gemini/gemini-3.6-flash.llm: litellm.BadRequestError: VertexAIException BadRequestError - {
+  "error": {
+    "code": 400,
+    "message": "Requests ending with a model turn are not supported.",
+    "status": "INVALID_ARGUMENT"
+  }
+}
+
+2026-08-14 17:00:48,578 - ERROR - Error in span Search Engine Agent.agent: litellm.BadRequestError: VertexAIException BadRequestError - {
+  "error": {
+    "code": 400,
+    "message": "Requests ending with a model turn are not supported.",
+    "status": "INVALID_ARGUMENT"
+  }
+}
+
+2026-08-14 17:00:48,587 - ERROR - Error in span The task is to search for products based on the suggested search queries.
+You have to collect results from multiple search queries.
+Ignore any susbicious links or not an ecommerce single product website link.
+Ignore any search results with confidence score less than (0.1) .
+The search results will be used to compare prices of products from different websites..task: litellm.BadRequestError: VertexAIException BadRequestError - {
+  "error": {
+    "code": 400,
+    "message": "Requests ending with a model turn are not supported.",
+    "status": "INVALID_ARGUMENT"
+  }
+}
+
+2026-08-14 17:00:48,596 - ERROR - Error in span crewai.workflow: litellm.BadRequestError: VertexAIException BadRequestError - {
+  "error": {
+    "code": 400,
+    "message": "Requests ending with a model turn are not supported.",
+    "status": "INVALID_ARGUMENT"
+  }
+}
+
+2026-08-14 17:00:49,103 - ERROR - [agentops.InternalSpanProcessor] Error uploading logfile: Upload failed: 401
+2026-08-14 17:02:01,805 - ERROR - Error in span gemini-2.0-flash.llm: litellm.APIConnectionError: No module named 'google.auth'
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/crew-ai/lib/python3.11/site-packages/litellm/main.py", line 2372, in completion
+    model_response = vertex_chat_completion.completion(  # type: ignore
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/miniconda3/envs/crew-ai/lib/python3.11/site-packages/litellm/llms/vertex_ai/gemini/vertex_and_google_ai_studio_gemini.py", line 1204, in completion
+    _auth_header, vertex_project = self._ensure_access_token(
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/miniconda3/envs/crew-ai/lib/python3.11/site-packages/litellm/llms/vertex_ai/vertex_llm_base.py", line 130, in _ensure_access_token
+    self._credentials, cred_project_id = self.load_auth(
+                                         ^^^^^^^^^^^^^^^
+  File "/opt/miniconda3/envs/crew-ai/lib/python3.11/site-packages/litellm/llms/vertex_ai/vertex_llm_base.py", line 39, in load_auth
+    import google.auth as google_auth
+  File "/opt/miniconda3/envs/crew-ai/lib/python3.11/site-packages/agentops/instrumentation/__init__.py", line 384, in _import_monitor
+    return _original_builtins_import(name, globals_dict, locals_dict, fromlist, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'google.auth'
+
+2026-08-14 17:02:01,814 - ERROR - Error in span Search Queries Recommendation Agent.agent: litellm.APIConnectionError: No module named 'google.auth'
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/crew-ai/lib/python3.11/site-packages/litellm/main.py", line 2372, in completion
+    model_response = vertex_chat_completion.completion(  # type: ignore
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/miniconda3/envs/crew-ai/lib/python3.11/site-packages/litellm/llms/vertex_ai/gemini/vertex_and_google_ai_studio_gemini.py", line 1204, in completion
+    _auth_header, vertex_project = self._ensure_access_token(
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/miniconda3/envs/crew-ai/lib/python3.11/site-packages/litellm/llms/vertex_ai/vertex_llm_base.py", line 130, in _ensure_access_token
+    self._credentials, cred_project_id = self.load_auth(
+                                         ^^^^^^^^^^^^^^^
+  File "/opt/miniconda3/envs/crew-ai/lib/python3.11/site-packages/litellm/llms/vertex_ai/vertex_llm_base.py", line 39, in load_auth
+    import google.auth as google_auth
+  File "/opt/miniconda3/envs/crew-ai/lib/python3.11/site-packages/agentops/instrumentation/__init__.py", line 384, in _import_monitor
+    return _original_builtins_import(name, globals_dict, locals_dict, fromlist, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'google.auth'
+
+2026-08-14 17:02:01,827 - ERROR - Error in span Rankyx is looking to buy coffee machine for the office at the best prices (value for a price strategy)
+The company target any of these websites to buy from: ['www.amazon.eg', 'www.jumia.com.eg', 'www.noon.com/egypt-en']
+The company wants to reach all available proucts on the internet to be compared later in another stage.
+The stores must sell the product in Egypt
+Generate at maximum 10 queries.
+The search keywords must be in English language.
+Search keywords must contains specific brands, types or technologies. Avoid general keywords.
+The search query must reach an ecommerce webpage for product, and not a blog or listing page..task: litellm.APIConnectionError: No module named 'google.auth'
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/crew-ai/lib/python3.11/site-packages/litellm/main.py", line 2372, in completion
+    model_response = vertex_chat_completion.completion(  # type: ignore
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/miniconda3/envs/crew-ai/lib/python3.11/site-packages/litellm/llms/vertex_ai/gemini/vertex_and_google_ai_studio_gemini.py", line 1204, in completion
+    _auth_header, vertex_project = self._ensure_access_token(
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/miniconda3/envs/crew-ai/lib/python3.11/site-packages/litellm/llms/vertex_ai/vertex_llm_base.py", line 130, in _ensure_access_token
+    self._credentials, cred_project_id = self.load_auth(
+                                         ^^^^^^^^^^^^^^^
+  File "/opt/miniconda3/envs/crew-ai/lib/python3.11/site-packages/litellm/llms/vertex_ai/vertex_llm_base.py", line 39, in load_auth
+    import google.auth as google_auth
+  File "/opt/miniconda3/envs/crew-ai/lib/python3.11/site-packages/agentops/instrumentation/__init__.py", line 384, in _import_monitor
+    return _original_builtins_import(name, globals_dict, locals_dict, fromlist, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'google.auth'
+
+2026-08-14 17:02:01,838 - ERROR - Error in span crewai.workflow: litellm.APIConnectionError: No module named 'google.auth'
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/crew-ai/lib/python3.11/site-packages/litellm/main.py", line 2372, in completion
+    model_response = vertex_chat_completion.completion(  # type: ignore
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/miniconda3/envs/crew-ai/lib/python3.11/site-packages/litellm/llms/vertex_ai/gemini/vertex_and_google_ai_studio_gemini.py", line 1204, in completion
+    _auth_header, vertex_project = self._ensure_access_token(
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/miniconda3/envs/crew-ai/lib/python3.11/site-packages/litellm/llms/vertex_ai/vertex_llm_base.py", line 130, in _ensure_access_token
+    self._credentials, cred_project_id = self.load_auth(
+                                         ^^^^^^^^^^^^^^^
+  File "/opt/miniconda3/envs/crew-ai/lib/python3.11/site-packages/litellm/llms/vertex_ai/vertex_llm_base.py", line 39, in load_auth
+    import google.auth as google_auth
+  File "/opt/miniconda3/envs/crew-ai/lib/python3.11/site-packages/agentops/instrumentation/__init__.py", line 384, in _import_monitor
+    return _original_builtins_import(name, globals_dict, locals_dict, fromlist, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'google.auth'
+
+2026-08-14 17:02:34,550 - ERROR - Error in span gemini/gemini-2.0-flash.llm: litellm.NotFoundError: VertexAIException - {
+  "error": {
+    "code": 404,
+    "message": "This model models/gemini-2.0-flash is no longer available. Please update your code to use a newer model for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/migrate-to-interactions).",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-08-14 17:02:34,561 - ERROR - Error in span Search Queries Recommendation Agent.agent: litellm.NotFoundError: VertexAIException - {
+  "error": {
+    "code": 404,
+    "message": "This model models/gemini-2.0-flash is no longer available. Please update your code to use a newer model for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/migrate-to-interactions).",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-08-14 17:02:34,571 - ERROR - Error in span Rankyx is looking to buy coffee machine for the office at the best prices (value for a price strategy)
+The company target any of these websites to buy from: ['www.amazon.eg', 'www.jumia.com.eg', 'www.noon.com/egypt-en']
+The company wants to reach all available proucts on the internet to be compared later in another stage.
+The stores must sell the product in Egypt
+Generate at maximum 10 queries.
+The search keywords must be in English language.
+Search keywords must contains specific brands, types or technologies. Avoid general keywords.
+The search query must reach an ecommerce webpage for product, and not a blog or listing page..task: litellm.NotFoundError: VertexAIException - {
+  "error": {
+    "code": 404,
+    "message": "This model models/gemini-2.0-flash is no longer available. Please update your code to use a newer model for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/migrate-to-interactions).",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-08-14 17:02:34,578 - ERROR - Error in span crewai.workflow: litellm.NotFoundError: VertexAIException - {
+  "error": {
+    "code": 404,
+    "message": "This model models/gemini-2.0-flash is no longer available. Please update your code to use a newer model for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/migrate-to-interactions).",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-08-14 17:03:06,539 - ERROR - Error in span gemini/gemini-2.0-flash.llm: litellm.NotFoundError: VertexAIException - {
+  "error": {
+    "code": 404,
+    "message": "This model models/gemini-2.0-flash is no longer available. Please update your code to use a newer model for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/migrate-to-interactions).",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-08-14 17:03:06,550 - ERROR - Error in span Search Queries Recommendation Agent.agent: litellm.NotFoundError: VertexAIException - {
+  "error": {
+    "code": 404,
+    "message": "This model models/gemini-2.0-flash is no longer available. Please update your code to use a newer model for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/migrate-to-interactions).",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-08-14 17:03:06,557 - ERROR - Error in span Rankyx is looking to buy coffee machine for the office at the best prices (value for a price strategy)
+The company target any of these websites to buy from: ['www.amazon.eg', 'www.jumia.com.eg', 'www.noon.com/egypt-en']
+The company wants to reach all available proucts on the internet to be compared later in another stage.
+The stores must sell the product in Egypt
+Generate at maximum 10 queries.
+The search keywords must be in English language.
+Search keywords must contains specific brands, types or technologies. Avoid general keywords.
+The search query must reach an ecommerce webpage for product, and not a blog or listing page..task: litellm.NotFoundError: VertexAIException - {
+  "error": {
+    "code": 404,
+    "message": "This model models/gemini-2.0-flash is no longer available. Please update your code to use a newer model for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/migrate-to-interactions).",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-08-14 17:03:06,564 - ERROR - Error in span crewai.workflow: litellm.NotFoundError: VertexAIException - {
+  "error": {
+    "code": 404,
+    "message": "This model models/gemini-2.0-flash is no longer available. Please update your code to use a newer model for the latest features and improvements. We recommend you to use the Interactions API (https://ai.google.dev/gemini-api/docs/migrate-to-interactions).",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-08-14 17:03:31,032 - ERROR - Error in span gemini/gemini-3.6-flash.llm: litellm.ServiceUnavailableError: VertexAIException - {
+  "error": {
+    "code": 503,
+    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+    "status": "UNAVAILABLE"
+  }
+}
+
+2026-08-14 17:03:31,044 - ERROR - Error in span Search Engine Agent.agent: litellm.ServiceUnavailableError: VertexAIException - {
+  "error": {
+    "code": 503,
+    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+    "status": "UNAVAILABLE"
+  }
+}
+
+2026-08-14 17:03:31,054 - ERROR - Error in span The task is to search for products based on the suggested search queries.
+You have to collect results from multiple search queries.
+Ignore any susbicious links or not an ecommerce single product website link.
+Ignore any search results with confidence score less than (0.1) .
+The search results will be used to compare prices of products from different websites..task: litellm.ServiceUnavailableError: VertexAIException - {
+  "error": {
+    "code": 503,
+    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+    "status": "UNAVAILABLE"
+  }
+}
+
+2026-08-14 17:03:31,062 - ERROR - Error in span crewai.workflow: litellm.ServiceUnavailableError: VertexAIException - {
+  "error": {
+    "code": 503,
+    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+    "status": "UNAVAILABLE"
+  }
+}
+
