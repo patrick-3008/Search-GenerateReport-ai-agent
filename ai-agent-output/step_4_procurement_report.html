@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procurement Report: Beverage & Coffee Equipment Evaluation</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #1a365d;
+            --secondary-color: #2b6cb0;
+            --accent-color: #d69e2e;
+            --bg-light: #f7fafc;
+            --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-light);
+            color: #2d3748;
+        }
+
+        .header-banner {
+            background: linear-gradient(135deg, #1a365d 0%, #2b6cb0 100%);
+            color: white;
+            padding: 2.5rem 0;
+            margin-bottom: 2rem;
+            border-bottom: 4px solid var(--accent-color);
+        }
+
+        .section-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: var(--card-shadow);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-left: 4px solid var(--secondary-color);
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            font-weight: 700;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .product-card {
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            height: 100%;
+        }
+
+        .product-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-img {
+            max-height: 180px;
+            object-fit: contain;
+            padding: 1rem;
+        }
+
+        .rank-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.85rem;
+        }
+
+        .price-tag {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #2b6cb0;
+        }
+
+        .original-price {
+            text-decoration: line-through;
+            color: #a0aec0;
+            font-size: 0.9rem;
+        }
+
+        .discount-badge {
+            background-color: #c53030;
+            color: white;
+            font-size: 0.75rem;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+        }
+
+        .spec-table td {
+            padding: 0.4rem 0;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1.5rem 0;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Banner -->
+    <header class="header-banner">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h1 class="fw-bold"><i class="fa-solid fa-mug-hot me-2"></i>Procurement Evaluation Report</h1>
+                    <p class="lead mb-0">Equipment & Amenity Selection for Campus & Student Facilities</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container mb-5">
+
+        <!-- 1. Executive Summary -->
+        <section class="section-card">
+            <h2 class="section-title"><i class="fa-solid fa-file-contract me-2"></i>1. Executive Summary</h2>
+            <p>This market benchmarking and procurement analysis evaluates coffee and espresso equipment intended for campus student centers, departmental breakrooms, and student housing amenities. The objective is to identify the optimal balance between initial capital expenditure, operational ease, durability, and user experience across multiple vendor platforms.</p>
+            <div class="row text-center mt-3">
+                <div class="col-md-3">
+                    <div class="p-3 border rounded bg-light">
+                        <div class="text-muted small">Total Options Benchmarked</div>
+                        <div class="fs-3 fw-bold text-primary">5 Units</div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="p-3 border rounded bg-light">
+                        <div class="text-muted small">Price Spectrum</div>
+                        <div class="fs-3 fw-bold text-primary">$129 - $1,299</div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="p-3 border rounded bg-light">
+                        <div class="text-muted small">Max Discount Sourced</div>
+                        <div class="fs-3 fw-bold text-success">23.67% Off</div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="p-3 border rounded bg-light">
+                        <div class="text-muted small">Top Pick</div>
+                        <div class="fs-3 fw-bold text-warning">Breville BES870XL</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Introduction -->
+        <section class="section-card">
+            <h2 class="section-title"><i class="fa-solid fa-circle-info me-2"></i>2. Introduction</h2>
+            <p><strong>Purpose & Scope:</strong> As part of the annual student facility enhancement initiative, this procurement assessment reviews market leading coffee and espresso systems. Providing high-quality amenities in common study spaces and resident lounges directly impacts student satisfaction and campus life quality.</p>
+            <p>The scope encompasses evaluating manual, semi-automatic, fully automatic, and pod-based machines across key performance criteria: cost efficiency, maintenance demands, unit longevity, and drink quality.</p>
+        </section>
+
+        <!-- 3. Methodology -->
+        <section class="section-card">
+            <h2 class="section-title"><i class="fa-solid fa-flask me-2"></i>3. Methodology</h2>
+            <p>Our quantitative procurement methodology involved automated pricing aggregation and feature indexing from major e-commerce platforms and specialized equipment vendors (Amazon, Whole Latte Love). Evaluation metrics were weighted as follows:</p>
+            <ul class="list-group list-group-horizontal-md text-center mb-3">
+                <li class="list-group-item flex-fill"><strong>30%</strong> Price & Value</li>
+                <li class="list-group-item flex-fill"><strong>25%</strong> Quality & Durability</li>
+                <li class="list-group-item flex-fill"><strong>25%</strong> Operational Ease</li>
+                <li class="list-group-item flex-fill"><strong>20%</strong> Maintenance & Consumables</li>
+            </ul>
+        </section>
+
+        <!-- 4. Findings -->
+        <section class="section-card">
+            <h2 class="section-title"><i class="fa-solid fa-store me-2"></i>4. Findings & Market Overview</h2>
+            <p class="mb-4">Below is the detailed profile of the top five shortlisted models identified during market scraping.</p>
+
+            <div class="row g-4">
+                <!-- Product 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card product-card position-relative">
+                        <span class="rank-badge">Rank #1</span>
+                        <img src="https://m.media-amazon.com/images/I/71BvCt6eAFL._SL1500_.jpg" class="card-img-top product-img mx-auto" alt="Breville BES870XL">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fs-6 fw-bold">Breville BES870XL Barista Express</h5>
+                            <div class="mb-2">
+                                <span class="price-tag">$699.95</span>
+                                <span class="original-price ms-2">$749.95</span>
+                                <span class="discount-badge ms-1">Save 6.67%</span>
+                            </div>
+                            <table class="table table-borderless spec-table mb-2">
+                                <tr><td><strong>Grinder:</strong> Integrated precision conical burr</td></tr>
+                                <tr><td><strong>Capacity:</strong> 2 Liters (67 fl. oz.)</td></tr>
+                                <tr><td><strong>Material:</strong> Stainless Steel</td></tr>
+                            </table>
+                            <div class="bg-light p-2 rounded small mt-auto mb-3">
+                                <i class="fa-solid fa-circle-check text-success me-1"></i> Top rated semi-automatic system with microfoam milk steaming.
+                            </div>
+                            <a href="https://www.amazon.com/Breville-BES870XL-Barista-Express-Espresso/dp/B00CH9QWOU" target="_blank" class="btn btn-sm btn-outline-primary w-100">View Product Link</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card product-card position-relative">
+                        <span class="rank-badge bg-secondary">Rank #2</span>
+                        <img src="https://m.media-amazon.com/images/I/71IBJQBjKjL._AC_SL1500_.jpg" class="card-img-top product-img mx-auto" alt="De'Longhi Dinamica Plus">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fs-6 fw-bold">De'Longhi Dinamica Plus Fully Automatic</h5>
+                            <div class="mb-2">
+                                <span class="price-tag">$1,299.95</span>
+                                <span class="original-price ms-2">$1,499.95</span>
+                                <span class="discount-badge ms-1">Save 13.33%</span>
+                            </div>
+                            <table class="table table-borderless spec-table mb-2">
+                                <tr><td><strong>Frother:</strong> Automatic LatteCrema System</td></tr>
+                                <tr><td><strong>Display:</strong> 3.5" Full Touch TFT Color</td></tr>
+                                <tr><td><strong>Capacity:</strong> 1.8 Liters</td></tr>
+                            </table>
+                            <div class="bg-light p-2 rounded small mt-auto mb-3">
+                                <i class="fa-solid fa-circle-check text-success me-1"></i> Premium fully automatic with smart app integration.
+                            </div>
+                            <a href="https://www.amazon.com/DeLonghi-Dinamica-Automatic-Cappuccinos-ECAM38085SB/dp/B0DQFNGWWF" target="_blank" class="btn btn-sm btn-outline-primary w-100">View Product Link</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card product-card position-relative">
+                        <span class="rank-badge bg-secondary">Rank #3</span>
+                        <img src="https://m.media-amazon.com/images/I/51+al6Du86L._AC_SL1080_.jpg" class="card-img-top product-img mx-auto" alt="Philips 2200 Series">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fs-6 fw-bold">Philips 2200 Series Automatic Espresso</h5>
+                            <div class="mb-2">
+                                <span class="price-tag">$499.99</span>
+                                <span class="original-price ms-2">$549.99</span>
+                                <span class="discount-badge ms-1">Save 9.09%</span>
+                            </div>
+                            <table class="table table-borderless spec-table mb-2">
+                                <tr><td><strong>Frother:</strong> Classic Pannarello Frother</td></tr>
+                                <tr><td><strong>Grinder:</strong> 100% Ceramic Grinders</td></tr>
+                                <tr><td><strong>Capacity:</strong> 1.8 Liters</td></tr>
+                            </table>
+                            <div class="bg-light p-2 rounded small mt-auto mb-3">
+                                <i class="fa-solid fa-circle-check text-success me-1"></i> Great entry-level bean-to-cup machine with AquaClean filter.
+                            </div>
+                            <a href="https://www.amazon.com/Philips-Automatic-Espresso-Machine-EP2220/dp/B07VFY4MXM" target="_blank" class="btn btn-sm btn-outline-primary w-100">View Product Link</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card product-card position-relative">
+                        <span class="rank-badge bg-secondary">Rank #4</span>
+                        <img src="https://www.wholelattelove.com/cdn/shop/files/GACLASSICPRO_1656.png?v=1764083881&width=1100" class="card-img-top product-img mx-auto" alt="Gaggia Classic Pro">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fs-6 fw-bold">Gaggia Classic Pro Espresso Machine</h5>
+                            <div class="mb-2">
+                                <span class="price-tag">$449.99</span>
+                                <span class="original-price ms-2">$499.99</span>
+                                <span class="discount-badge ms-1">Save 10.00%</span>
+                            </div>
+                            <table class="table table-borderless spec-table mb-2">
+                                <tr><td><strong>Portafilter:</strong> Commercial 58mm Chrome Brass</td></tr>
+                                <tr><td><strong>Boiler:</strong> Stainless Steel Lined Aluminum</td></tr>
+                                <tr><td><strong>Wand:</strong> Commercial Two-Hole Steam Wand</td></tr>
+                            </table>
+                            <div class="bg-light p-2 rounded small mt-auto mb-3">
+                                <i class="fa-solid fa-circle-check text-success me-1"></i> Commercial-grade durable construction made in Italy.
+                            </div>
+                            <a href="https://www.wholelattelove.com/products/gaggia-classic-pro" target="_blank" class="btn btn-sm btn-outline-primary w-100">View Product Link</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card product-card position-relative">
+                        <span class="rank-badge bg-secondary">Rank #5</span>
+                        <img src="https://m.media-amazon.com/images/I/71lh9pfr-eL._AC_SL1500_.jpg" class="card-img-top product-img mx-auto" alt="Nespresso Vertuo Next">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fs-6 fw-bold">Nespresso Vertuo Next by De'Longhi</h5>
+                            <div class="mb-2">
+                                <span class="price-tag">$129.00</span>
+                                <span class="original-price ms-2">$169.00</span>
+                                <span class="discount-badge ms-1">Save 23.67%</span>
+                            </div>
+                            <table class="table table-borderless spec-table mb-2">
+                                <tr><td><strong>Technology:</strong> Centrifusion Extraction</td></tr>
+                                <tr><td><strong>Capacity:</strong> 37 oz Water Reservoir</td></tr>
+                                <tr><td><strong>Operation:</strong> Single-touch button</td></tr>
+                            </table>
+                            <div class="bg-light p-2 rounded small mt-auto mb-3">
+                                <i class="fa-solid fa-circle-check text-success me-1"></i> Budget-friendly single-serve option for rapid usage.
+                            </div>
+                            <a href="https://www.amazon.com/Nespresso-DeLonghi-ENV120GYAE-Espresso-Aeroccino/dp/B084GY5FHN" target="_blank" class="btn btn-sm btn-outline-primary w-100">View Product Link</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Table Comparison -->
+            <h4 class="mt-5 mb-3 fw-bold">Comprehensive Price Comparison Table</h4>
+            <div class="table-responsive">
+                <table class="table table-hover align-middle table-bordered">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Rank</th>
+                            <th>Model Name</th>
+                            <th>Current Price</th>
+                            <th>Original Price</th>
+                            <th>Discount</th>
+                            <th>Key Feature</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="badge bg-warning text-dark">#1</span></td>
+                            <td>Breville BES870XL Barista Express</td>
+                            <td class="fw-bold text-success">$699.95</td>
+                            <td class="text-muted"><del>$749.95</del></td>
+                            <td><span class="badge bg-danger">6.67%</span></td>
+                            <td>Integrated Conical Burr Grinder</td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge bg-secondary">#2</span></td>
+                            <td>De'Longhi Dinamica Plus</td>
+                            <td class="fw-bold text-success">$1,299.95</td>
+                            <td class="text-muted"><del>$1,499.95</del></td>
+                            <td><span class="badge bg-danger">13.33%</span></td>
+                            <td>Automatic LatteCrema System</td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge bg-secondary">#3</span></td>
+                            <td>Philips 2200 Series</td>
+                            <td class="fw-bold text-success">$499.99</td>
+                            <td class="text-muted"><del>$549.99</del></td>
+                            <td><span class="badge bg-danger">9.09%</span></td>
+                            <td>100% Ceramic Grinders</td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge bg-secondary">#4</span></td>
+                            <td>Gaggia Classic Pro</td>
+                            <td class="fw-bold text-success">$449.99</td>
+                            <td class="text-muted"><del>$499.99</del></td>
+                            <td><span class="badge bg-danger">10.00%</span></td>
+                            <td>58mm Commercial Portafilter</td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge bg-secondary">#5</span></td>
+                            <td>Nespresso Vertuo Next</td>
+                            <td class="fw-bold text-success">$129.00</td>
+                            <td class="text-muted"><del>$169.00</del></td>
+                            <td><span class="badge bg-danger">23.67%</span></td>
+                            <td>Single-touch Centrifusion Brewing</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 5. Analysis -->
+        <section class="section-card">
+            <h2 class="section-title"><i class="fa-solid fa-chart-pie me-2"></i>5. Analysis</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h5 class="fw-bold">Cost & Operational Dynamics</h5>
+                    <p>When assessing Total Cost of Ownership (TCO), initial capital costs must be balanced against ongoing consumable costs:</p>
+                    <ul>
+                        <li><strong>Whole Bean Systems (Breville, Philips, Gaggia):</strong> Higher upfront equipment cost ($449 - $699), but significantly lower cost per cup (~$0.20 - $0.35/cup) over the machine lifecycle.</li>
+                        <li><strong>Pod Systems (Nespresso Vertuo):</strong> Lowest initial equipment cost ($129), but high ongoing consumable cost (~$1.10 - $1.45/pod), making it more costly for high-volume shared environments over 12+ months.</li>
+                        <li><strong>Fully Automatic (De'Longhi):</strong> Premium price point ($1,299.95) justified for executive suites or high-visibility student centers requiring one-touch convenience and low user intervention.</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h5 class="fw-bold">Maintainability & User Suitability</h5>
+                    <p>In student communal settings, ease of cleaning and user error prevention are critical factors:</p>
+                    <ul>
+                        <li><strong>Breville BES870XL:</strong> Strikes the best balance of build quality, user satisfaction, and bean efficiency. Recommended for managed common areas.</li>
+                        <li><strong>Philips 2200:</strong> Offers the easiest automated maintenance via ceramic grinders and removable brew group.</li>
+                        <li><strong>Gaggia Classic Pro:</strong> Highly durable for enthusiastic users, but requires a separate grinder purchase.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Recommendations -->
+        <section class="section-card">
+            <h2 class="section-title"><i class="fa-solid fa-thumbs-up me-2"></i>6. Recommendations</h2>
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <div class="p-3 border rounded bg-light border-primary h-100">
+                        <span class="badge bg-primary mb-2">Primary Procurement Target</span>
+                        <h6 class="fw-bold">Breville BES870XL</h6>
+                        <p class="small text-muted mb-0">Recommended for main student lounge and club headquarters. Superior build quality, built-in grinder, and optimal cost-per-cup efficiency.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-3 border rounded bg-light border-secondary h-100">
+                        <span class="badge bg-success mb-2">Best Value Bean-to-Cup</span>
+                        <h6 class="fw-bold">Philips 2200 Series</h6>
+                        <p class="small text-muted mb-0">Recommended for secondary breakrooms. Low maintenance burden and simple push-button operation suitable for multi-user shared spaces.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-3 border rounded bg-light border-info h-100">
+                        <span class="badge bg-info text-dark mb-2">Low-Volume Option</span>
+                        <h6 class="fw-bold">Nespresso Vertuo Next</h6>
+                        <p class="small text-muted mb-0">Recommended strictly for small meeting rooms or low-frequency administrative offices where low initial capital expense is paramount.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Conclusion -->
+        <section class="section-card">
+            <h2 class="section-title"><i class="fa-solid fa-flag-checkered me-2"></i>7. Conclusion</h2>
+            <p>Based on comprehensive market evaluation, the <strong>Breville BES870XL Barista Express</strong> stands out as the primary procurement candidate, delivering high reliability, low per-cup operational costs, and exceptional overall value at $699.95. For secondary locations requiring fully automated zero-prep operation, the <strong>Philips 2200 Series</strong> serves as the recommended alternative.</p>
+        </section>
+
+        <!-- 8. Appendices -->
+        <section class="section-card">
+            <h2 class="section-title"><i class="fa-solid fa-paperclip me-2"></i>8. Appendices</h2>
+            <p class="small text-muted"><strong>Appendix A: Data Extraction Metadata</strong></p>
+            <ul class="small text-muted">
+                <li>Data Source: Amazon US & Whole Latte Love E-commerce Stores</li>
+                <li>Extraction Method: Automated Web Scraping & Merchant API Query</li>
+                <li>Currencies: USD ($)</li>
+                <li>Tax & Delivery Exclusions: Standard regional taxes and delivery terms apply per vendor agreement.</li>
+            </ul>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="container">
+            <p class="mb-0 small">&copy; 2023 University Equipment Procurement & Asset Management Division. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

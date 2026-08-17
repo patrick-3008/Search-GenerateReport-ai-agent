@@ -1,0 +1,144 @@
+{
+  "products": [
+    {
+      "page_url": "https://www.amazon.com/Breville-BES870XL-Barista-Express-Espresso/dp/B00CH9QWOU",
+      "product_title": "Breville BES870XL Barista Express Espresso Machine, Brushed Stainless Steel",
+      "product_image_url": "https://m.media-amazon.com/images/I/813639-J+1L._AC_SL1500_.jpg",
+      "product_url": "https://www.amazon.com/Breville-BES870XL-Barista-Express-Espresso/dp/B00CH9QWOU",
+      "product_current_price": 699.95,
+      "product_original_price": 749.95,
+      "product_discount_percentage": 6.67,
+      "product_specs": [
+        {
+          "specification_name": "Integrated Grinder",
+          "specification_value": "Integrated precision conical burr grinder"
+        },
+        {
+          "specification_name": "Capacity",
+          "specification_value": "2 Liters (67 fl. oz.) water tank"
+        },
+        {
+          "specification_name": "Material",
+          "specification_value": "Brushed Stainless Steel"
+        }
+      ],
+      "agent_recommendation_rank": 1,
+      "agent_recommendation_notes": [
+        "Top rated semi-automatic espresso machine for home baristas.",
+        "Includes built-in grinder and manual microfoam milk steaming."
+      ]
+    },
+    {
+      "page_url": "https://www.amazon.com/DeLonghi-ECAM37095TI-Dinamica-Automatic-Espresso/dp/B08FCZ5J8K",
+      "product_title": "De'Longhi Dinamica Plus Fully Automatic Espresso Machine with LatteCrema System",
+      "product_image_url": "https://m.media-amazon.com/images/I/61N+VSpfDCL._AC_SL1500_.jpg",
+      "product_url": "https://www.amazon.com/DeLonghi-ECAM37095TI-Dinamica-Automatic-Espresso/dp/B08FCZ5J8K",
+      "product_current_price": 1299.95,
+      "product_original_price": 1499.95,
+      "product_discount_percentage": 13.33,
+      "product_specs": [
+        {
+          "specification_name": "Milk Frother",
+          "specification_value": "Automatic LatteCrema System"
+        },
+        {
+          "specification_name": "Display",
+          "specification_value": "3.5 inch Full Touch TFT Color Display"
+        },
+        {
+          "specification_name": "Capacity",
+          "specification_value": "1.8 Liters water container"
+        }
+      ],
+      "agent_recommendation_rank": 2,
+      "agent_recommendation_notes": [
+        "Premium fully automatic espresso machine with rich drink customization.",
+        "Smart connect app integration and automatic milk frothing."
+      ]
+    },
+    {
+      "page_url": "https://www.amazon.com/Philips-Automatic-Espresso-Machine-EP2220/dp/B07VFY4MXM",
+      "product_title": "Philips 2200 Series Fully Automatic Espresso Machine with Classic Milk Frother",
+      "product_image_url": "https://m.media-amazon.com/images/I/718y6K-qYDL._AC_SL1500_.jpg",
+      "product_url": "https://www.amazon.com/Philips-Automatic-Espresso-Machine-EP2220/dp/B07VFY4MXM",
+      "product_current_price": 499.99,
+      "product_original_price": 549.99,
+      "product_discount_percentage": 9.09,
+      "product_specs": [
+        {
+          "specification_name": "Milk Frother",
+          "specification_value": "Classic Pannarello Milk Frother"
+        },
+        {
+          "specification_name": "Grinder Material",
+          "specification_value": "100% Ceramic Grinders"
+        },
+        {
+          "specification_name": "Capacity",
+          "specification_value": "1.8 Liters"
+        }
+      ],
+      "agent_recommendation_rank": 3,
+      "agent_recommendation_notes": [
+        "Great value for entry-level bean-to-cup fully automatic machine.",
+        "Easy maintenance with AquaClean water filter capability."
+      ]
+    },
+    {
+      "page_url": "https://www.wholelattelove.com/products/gaggia-classic-pro",
+      "product_title": "Gaggia Classic Pro Espresso Machine",
+      "product_image_url": "https://cdn.shopify.com/s/files/1/0088/2432/0064/products/Gaggia-Classic-Pro-Thunder-Black.jpg",
+      "product_url": "https://www.wholelattelove.com/products/gaggia-classic-pro",
+      "product_current_price": 449.99,
+      "product_original_price": 499.99,
+      "product_discount_percentage": 10.0,
+      "product_specs": [
+        {
+          "specification_name": "Portafilter",
+          "specification_value": "Commercial 58mm Chrome-plated Brass Portafilter"
+        },
+        {
+          "specification_name": "Boiler Material",
+          "specification_value": "Stainless Steel Lined Aluminum"
+        },
+        {
+          "specification_name": "Steam Wand",
+          "specification_value": "Commercial Style Two-Hole Steam Wand"
+        }
+      ],
+      "agent_recommendation_rank": 4,
+      "agent_recommendation_notes": [
+        "Classic choice for espresso enthusiasts wanting professional standard portafilters.",
+        "Durable design made in Italy."
+      ]
+    },
+    {
+      "page_url": "https://www.amazon.com/Nespresso-Vertuo-Coffee-Espresso-DeLonghi/dp/B08557Q9C2",
+      "product_title": "Nespresso Vertuo Next Coffee and Espresso Machine by De'Longhi",
+      "product_image_url": "https://m.media-amazon.com/images/I/61p-8wH21GL._AC_SL1500_.jpg",
+      "product_url": "https://www.amazon.com/Nespresso-Vertuo-Coffee-Espresso-DeLonghi/dp/B08557Q9C2",
+      "product_current_price": 129.0,
+      "product_original_price": 169.0,
+      "product_discount_percentage": 23.67,
+      "product_specs": [
+        {
+          "specification_name": "Brewing Technology",
+          "specification_value": "Centrifusion Extraction Technology"
+        },
+        {
+          "specification_name": "Capacity",
+          "specification_value": "37 oz Water Reservoir"
+        },
+        {
+          "specification_name": "Operation",
+          "specification_value": "Single-touch button operation"
+        }
+      ],
+      "agent_recommendation_rank": 5,
+      "agent_recommendation_notes": [
+        "Budget-friendly single-serve option for fast coffee and espresso.",
+        "Requires Nespresso Vertuo pods."
+      ]
+    }
+  ]
+}
